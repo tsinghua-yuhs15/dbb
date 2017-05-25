@@ -1,0 +1,24 @@
+body {
+    background-color: #fbf9fe
+}
+
+td {
+    text-align: center;
+}
+
+.qa {
+    font-family: 楷体;
+}
+.title-Primary {
+    text-align: center;
+                  font-size: 28px;
+                  color: #3cc51f;
+                  font-weight: 400;
+                  margin: 0 15%
+}
+
+.title-Secondary {
+    text-align: center;
+                   color: #888;
+                   font-size: 14px;
+}

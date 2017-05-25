@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#f0988a">
+    <title>Real-time Monitoring Pane</title>
+    <link rel="stylesheet" href="/css/global.css" type="text/css">
+    <link rel="stylesheet" href="/css/monitor.css" type="text/css">
+    <script type="text/javascript" src="/common/jqplot/jQuery.js"></script>
+    <script type="text/javascript" src="../common/jqplot/jqplot.js"></script>
+    <script language="JavaScript" src="time.js"></script>
+</head>
+
+<body onload="query_update()"> <a style="float:right;margin-top:4px;" href="../reg/my.php">个人中心</a>
+    <div id="container">
+        <div class="primary">Real-time Monitoring Panel</div>
+        <div class="secondary">
+            <lable id="update-time-lable">last report: </lable><span id="update-time-desc"></span> <span id="time-diff">请求数据中...</span> </div>
+        <div class="secondary"><span id="update-time"></span><span id="abnormal_txt">Abnormal!</span><img id="abnormal_img" src="images/icon_nav_icons.png" /></div>
+        <table class="zebra" id="Power-info">
+            <tr>
+                <td>Table's Loading...</td>
+            </tr>
+        </table>
+        <br/>
+        <div id="phpresponse"></div>
+        <button onclick="stop_update();">停止刷新 </button>
+        <button onclick="query_update();">开始刷新 </button>
+        <select id="interval" onchange="change_interval();" ;>
+            <option value="2000">2秒</option>
+            <option value="5000" selected>5秒</option>
+            <option value="10000">10秒</option>
+            <option value="30000">30秒</option>
+            <option value="60000">1分钟</option>
+            <option value="120000">2分钟</option>
+        </select><a href="gen_record.php?r=4" target="_blank">实时数据生成器</a> </div>
+    <br/><a href="/index.html">返回首页</a>
+    <div id="chart1" style="margin-top:40px;"></div>
+    <select id="during" onchange="" ;>
+        <option value="60">1分钟</option>
+        <option value="100" selected>100秒</option>
+        <option value="300">5分钟</option>
+        <option value="1800">30分钟</option>
+        <option value="7200">2小时</option>
+        <option value="21600">6小时</option>
+        <option value="21600">12小时</option>
+    </select>
+</body>
+
+</html>

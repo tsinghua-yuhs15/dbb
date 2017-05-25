@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户登录</title>
+    <!--link rel="stylesheet" type="text/css" href="\css/login.css?v=1.0"-->
+    <script language=JavaScript>
+        <!--
+        function submitForm() {
+            document.getElementById("form-signin").submit();
+        }
+
+        function InputCheck(LoginForm) {
+            if (LoginForm.username.value == "") {
+                alert("请输入手机号!");
+                LoginForm.username.focus();
+                return (false);
+            }
+            if (LoginForm.password.value == "") {
+                alert("请输入密码!");
+                LoginForm.password.focus();
+                return (false);
+            }
+        }
+        //-->
+    </script>
+</head>
+
+<body>
+    <div>
+        <fieldset>
+            <legend>用户登录</legend>
+            <form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)">
+                <p>
+                    <label for="username" class="label">登录名:</label>
+                    <input id="username" name="username" type="text" class="input" placeholder="手机号/邮箱" />
+                    <p/>
+                    <p>
+                        <label for="password" class="label">密 码:</label>
+                        <input id="password" name="password" type="password" class="input" /> <a href="forget_password.html">忘记密码</a>
+                        <p/>
+                        <p>
+                            <input type="submit" name="submit" value="  登 陆  " class="left" />
+                            <input type="button" name="reg" value="  注 册  " class="right" onClick="location='reg.html'"> </p>
+            </form>
+        </fieldset>
+    </div>
+</body>
+
+</html>

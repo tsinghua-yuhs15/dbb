@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>登录到电宝宝</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#f0988a">
+    <link rel="stylesheet" type="text/css" href="/css/global.css?v=1.01">
+    <link rel="stylesheet" type="text/css" href="/css/login.css?v=1.01">
+    <script src="../common/md5.min.js"></script>
+    <script>
+        function submit_form() {
+            document.getElementById("pwd_hash").value = md5(document.getElementById("password").value);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="login">
+        <form name="LoginForm" method="post" action="login.php">
+            <h2>Log in</h2>
+            <fieldset class="inputs">
+                <input type="hidden" value="login" />
+                <input id="username" type="text" name="username" placeholder="手机号/邮箱" autofocus required>
+                <input id="password" type="password" placeholder="密码" required> </fieldset>
+            <input id="pwd_hash" type="hidden" name="pwd_hash" value="" />
+            <fieldset id="forget"><a href="forget_password.html">忘记密码？</a></fieldset>
+            <fieldset id="actions">
+                <input type="submit" name="submit" id="submit" value="登   陆" onclick="return submit_form()">
+                <input type="button" id="reg" value="注   册" onClick="location='reg.html'"> </fieldset> <a href="/index.html" style="font-size:large;" id="back">首页</a> </form>
+    </div>
+</body>
+
+</html>

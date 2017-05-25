@@ -1,0 +1,192 @@
+@charset "UTF-8";
+html,
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background: url(../images/backgrounds/1_u.jpg) repeat;
+    background-size: cover;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+/*--- 父容器布局 ---*/
+
+#container {
+    padding-top: 20px;
+    /*
+    margin: 0 auto;
+    margin-left: 1px;
+    */
+    margin: 0px 15px 0px 15px;
+}
+
+
+/*--- 表格标题及信息 ---*/
+
+#container .primary {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding-top: 20px;
+    height: 35px;
+}
+
+#container .secondary {
+    display: block;
+    font-size: small;
+    font-weight: normal;
+    margin-bottom: 4px;
+    color: #4e4e4e;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    height: 14px;
+    /* height: 20px;*/
+}
+
+#abnormal_img,
+#abnormal_txt {
+    display: inline;
+    float: right;
+    height: 100%;
+    margin-right: 8px;
+    font-size: small;
+    color: #ffffff;
+}
+
+#abnormal_txt {
+    background-color: rgba(216, 29, 29, 0.81);
+}
+
+
+/*--- 表格元素布局 ---*/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    -webkit-box-shadow: 0px 2px 1px 5px rgba(242, 242, 242, 0.1);
+    box-shadow: 0px 2px 1px 5px rgba(242, 242, 242, 0.1);
+}
+
+table.zebra {
+    border: 1px solid #555;
+    width: 100%;
+}
+
+
+/*--- 单元格布局 ---*/
+
+.zebra td {
+    border-left: 1px solid #555;
+    border-top: 1px solid #555;
+    padding: 5px;
+    height: 20px;
+    text-align: center;
+}
+
+
+/*--- 标题列配色及布局 ---*/
+
+.zebra th,
+.zebra th:hover {
+    border-left: 1px solid #555;
+    border-bottom: 1px solid #828282;
+    padding: 20px;
+    background-color: #151515 !important;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#404040)) !important;
+    /*--- 适配不同浏览器 ---*/
+    background-image: -webkit-linear-gradient(top, rgba(209, 138, 138, 0.6), rgba(114, 114, 114, 0.6)) !important;
+    background-image: -moz-linear-gradient(top, rgba(209, 138, 138, 0.6), rgba(114, 114, 114, 0.6)) !important;
+    background-image: -ms-linear-gradient(top, rgba(209, 138, 138, 0.6), rgba(114, 114, 114, 0.6)) !important;
+    background-image: -o-linear-gradient(top, rgba(209, 138, 138, 0.6), rgba(114, 114, 114, 0.6)) !important;
+    background-image: linear-gradient(top, #151515, #404040) !important;
+    color: #fff !important;
+    font-weight: normal;
+    font-size: small;
+}
+
+
+/*--- 单元格的配色 ---*/
+
+.zebra tbody tr {
+    color: #fff;
+}
+
+.zebra tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.zebra tbody tr:nth-child(odd) {
+    background: rgba(46, 46, 46, 0.6);
+}
+
+td.warn {
+    position: relative;
+    animation: flash 1.5s 2;
+    -webkit-animation: flash 1.5s infinite;
+    /* 动画，适用于Safari and Chrome */
+}
+
+
+/*--- 鼠标悬浮处的配色 ---*/
+
+.zebra tr:hover * {
+    background: #b2b2b2;
+    color: #000;
+}
+
+
+/*--- 各个列的宽度设置 ---*/
+
+#Number {
+    width: 14%;
+    padding: 0px;
+}
+
+#Voltage,
+#Current,
+#Power,
+#Capacity {
+    width: 20%;
+}
+
+#update-time-lable,
+#update-time,
+#update-time-desc {
+    float: left;
+}
+
+#time-diff {
+    float: right;
+    font-family: fantasy;
+}
+
+
+/*--- 动画设置 ---*/
+
+@-webkit-keyframes flash {
+    0%,
+    100% {
+        background: #710000;
+    }
+    50% {
+        background: red;
+    }
+}
+
+@keyframes flash {
+    0%,
+    100% {
+        background: #710000;
+    }
+    50% {
+        background: red;
+    }
+}
+
+#update-time-desc {
+    padding-left: 7px;
+}

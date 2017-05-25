@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>WeUI</title>
+    <link rel="stylesheet" href="/css/weui.min.css" /> </head>
+
+<body>
+    <p style="text-align: center;
+                   color: #888;
+                   font-size: 30px;font-family:宋体">意见反馈 </p>
+    <div class="weui_cells_title">请选择使用过程中遇到的问题</div>
+    <div class="weui_cells weui_cells_checkbox">
+        <label class="weui_cell weui_check_label" for="s11">
+            <div class="weui_cell_hd">
+                <input type="checkbox" class="weui_check" name="checkbox1" id="s11"> <i class="weui_icon_checked"></i> </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>柜门开启太慢</p>
+            </div>
+        </label>
+        <label class="weui_cell weui_check_label" for="s12">
+            <div class="weui_cell_hd">
+                <input type="checkbox" class="weui_check" name="checkbox2" id="s12"> <i class="weui_icon_checked"></i> </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>电池放不下</p>
+            </div>
+        </label>
+        <label class="weui_cell weui_check_label" for="s13">
+            <div class="weui_cell_hd">
+                <input type="checkbox" class="weui_check" name="checkbox3" id="s13"> <i class="weui_icon_checked"></i> </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>网页无法打开</p>
+            </div>
+        </label>
+        <label class="weui_cell weui_check_label" for="s14">
+            <div class="weui_cell_hd">
+                <input type="checkbox" class="weui_check" name="checkbox4" id="s14"> <i class="weui_icon_checked"></i> </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>其他</p>
+            </div>
+        </label>
+    </div>
+    <div class="weui_cells_title">您是否会向其他人推荐此产品？</div>
+    <div class="weui_cells weui_cells_radio">
+        <label class="weui_cell weui_check_label" for="x11">
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>会</p>
+            </div>
+            <div class="weui_cell_ft">
+                <input type="radio" name="radio1" class="weui_check" id="x11"> <span class="weui_icon_checked"></span> </div>
+        </label>
+        <label class="weui_cell weui_check_label" for="x12">
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>不会</p>
+            </div>
+            <div class="weui_cell_ft">
+                <input type="radio" name="radio1" class="weui_check" id="x12"> <span class="weui_icon_checked"></span> </div>
+        </label>
+    </div>
+    <div class="weui_cells_title">表单</div>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_hd">
+                <label class="weui_label">电话</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="number" pattern="[0-9]*" placeholder="选填，方便我们与您联系" /> </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd">
+                <label class="weui_label">补充说明</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="number" placeholder="其他补充说明" /> </div>
+        </div>
+    </div>
+    <div class="weui_cells_tips">我们会持续改进，感谢您的支持！</div>
+    <div class="weui_btn_area"> <a class="weui_btn weui_btn_primary" href="feedback_success.html" id="showTooltips">确定</a> </div>
+    <div class="weui_btn_area"> <a class="weui_btn weui_btn_plain_primary" href="/index.html" id="showTooltips">返回首页</a> </div>
+</body>

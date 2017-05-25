@@ -1,0 +1,12 @@
+<!--    定时跳转    -->
+<meta http-equiv="refresh" content="3;URL=res.html">
+<!--   PHP 直接跳转
+<?php
+header('HTTP/1.1 303 See Other');
+header("Location: /index.html");
+//确保重定向后，后续代码不会被执行
+exit;?>
+-->
+<!--    禁止缓存    -->
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />

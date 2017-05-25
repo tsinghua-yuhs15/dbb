@@ -1,0 +1,143 @@
+html {
+    font-size: 16px;
+}
+
+
+/*
+body {
+    background: url(../images/noise.png) left top repeat, url(../images/dot_pattern.png) left top repeat, url(../images/backgrounds/1_u.jpg) left top/cover no-repeat;
+}*/
+
+a {
+    padding-left: 5px;
+}
+
+.inputs input {
+    background: #f1f1f1 url(/../images/login-sprite.png) no-repeat;
+    /* 353 + 2 + 45 = 400 */
+    border: 1px solid #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+}
+
+.inputs input:focus {
+    background-color: #fff;
+    border-color: #e8c291;
+    outline: none;
+    -moz-box-shadow: 0 0 0 1px #e8c291 inset;
+    -webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+    box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+fieldset {
+    /*    width: 300px;*/
+    margin: inherit;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.label {
+    float: left;
+    width: 70px;
+    margin-left: 10px;
+    color: black;
+    /*font-size: 12px;*/
+}
+
+.left {
+    margin-left: 80px;
+}
+
+.input {
+    width: 150px;
+}
+
+span {
+    color: #666666;
+}
+
+span.necessary {
+    color: red;
+}
+
+.title-Primary {
+    text-align: center;
+    font-size: 28px;
+    color: #3cc51f;
+    font-weight: 400;
+    margin: 0 15%
+}
+
+.title-Secondary {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+}
+
+p.subtitle {
+    font-size: large;
+    font-weight: bold;
+}
+
+li.forget-step {
+    /* background: url(/images/sub_nav_1.png) no-repeat 0 0;*/
+    display: block;
+    float: left;
+    width: 128px;
+    /*height: 20px;*/
+    /*margin-right: 5px;*/
+    padding-left: 20px;
+}
+
+li.forget-active {
+    background: url(/images/sub_nav_1.png) no-repeat 0 0;
+    display: block;
+    float: left;
+    width: 129px;
+    /*height: 20px;*/
+    /*margin-right: 5px;*/
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.mod-forget {
+    background: url(/images/mod_sub_nav.png) no-repeat 0 0;
+    height: 34px;
+    margin: 5px;
+    line-height: 34px;
+    /*vertical central*/
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.label2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 14px;
+}
+
+.mod-step-detail {
+    margin-left: 6px;
+    margin-top: 10px;
+}
+
+fieldset.forget {
+    width: 340px;
+    margin-top: 30px;
+    margin-left: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+lable.forget_lable {
+    float: left;
+    line-height: 21px;
+}

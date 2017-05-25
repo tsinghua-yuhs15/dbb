@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="\css/weui.min.css" />
+    <link rel="stylesheet" href="\css/global.css" />
+    <script type="text/javascript" src="\common/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="setting.js"></script>
+    <style type="text/css">
+        body {
+            background-color: #fbf9fe
+        }
+        
+        .page_desc {}
+        
+        .page_title {}
+    </style>
+    <title>电宝宝智能充电桩</title>
+</head>
+
+
+<body style="background:none;" onload="update_setting_panel()">
+    <p class="title-Primary">电宝宝智能充电桩 </p>
+    <p class="title-Secondary">为您的电池量身设计 </p>
+    <hr/>
+    <br/>
+    <form action="setting.php" method="post">
+        <div class="weui_cells_title">消息类型设置</div>
+        <div class="weui_cells weui_cells_form">
+            <div class="weui_cell weui_cell_switch">
+                <div class="weui_cell_hd weui_cell_primary">系统消息</div>
+                <div class="weui_cell_ft">
+                    <input class="weui_switch" type="checkbox" id="sys_info" name="sys_info" />
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_switch">
+                <div class="weui_cell_hd weui_cell_primary">实时监听消息</div>
+                <div class="weui_cell_ft">
+                    <input class="weui_switch" type="checkbox" id="monit_info" name="monit_info" />
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary" id="inter" name="inter">
+                    间隔时间
+                </div>
+            </div>
+
+            <!--BEGIN actionSheet-->
+            <div id="actionSheet_wrap">
+                <div class="weui_mask_transition" id="mask"></div>
+                <div class="weui_actionsheet" id="weui_actionsheet">
+                    <div class="weui_actionsheet_menu">
+                        <div class="weui_actionsheet_cell">1h</div>
+                        <div class="weui_actionsheet_cell">2h</div>
+                        <div class="weui_actionsheet_cell">5h</div>
+                        <div class="weui_actionsheet_cell">自定义</div>
+                    </div>
+                    <div class="weui_actionsheet_action">
+                        <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="weui_cell weui_cell_switch">
+                <div class="weui_cell_hd weui_cell_primary">突发消息</div>
+                <div class="weui_cell_ft">
+                    <input class="weui_switch" type="checkbox" id="intr_info" name="intr_info" />
+                </div>
+            </div>
+        </div>
+        <div class="weui_cells_title">通知方式设置</div>
+        <div class="weui_cells weui_cells_radio">
+            <label class="weui_cell weui_check_label" for="x11">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>短信通知</p>
+                </div>
+                <div class="weui_cell_ft">
+                    <input type="radio" class="weui_check" name="radio1" id="x11">
+                    <span class="weui_icon_checked"></span>
+                </div>
+            </label>
+            <label class="weui_cell weui_check_label" for="x12">
+
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>电子邮件通知</p>
+                </div>
+                <div class="weui_cell_ft">
+                    <input type="radio" name="radio1" class="weui_check" id="x12">
+                    <span class="weui_icon_checked"></span>
+                </div>
+            </label>
+            <label class="weui_cell weui_check_label" for="x13">
+
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>公众号通知</p>
+                </div>
+                <div class="weui_cell_ft">
+                    <input type="radio" name="radio1" class="weui_check" id="x13">
+                    <span class="weui_icon_checked"></span>
+                </div>
+            </label>
+        </div>
+        <div class="weui_cells weui_cells_form">
+            <div class="weui_cell">
+                <div class="weui_cell_hd">
+                    <label class="weui_label"></label>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" name="inter" id="inter1" value="">
+        <div class="box" style="padding: 10px;">
+            <input class="weui_btn weui_btn_primary" type="submit" value="确定" onclick="getSettingInfo()">
+            <a href="\index.html" class="weui_btn weui_btn_plain_primary">返回</a>
+        </div>
+    </form>
+
+</body>

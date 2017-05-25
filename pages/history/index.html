@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> 充电记录 </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="/css/weui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/history.css?v=1.00">
+    <script type="text/javascript" src="../common/jqplot/jQuery.js"></script>
+    <script type="text/javascript" src="../common/jqplot/jqplot.js"></script>
+    <script type="text/javascript" src="history.js?v=1.00"></script>
+</head>
+
+<body onload="update_chart_data()">
+    <p class="title-Primary">电宝宝智能充电桩 </p>
+    <p class="title-Secondary">为您的电池量身设计</p>
+    <hr/>
+    <div align="center"> <a href="javascript:prev_month();" class="weui_btn weui_btn_mini weui_btn_primary" style="float:left;margin: 10px 0px 5px 10px;">上月
+                    </a><a href="javascript:current_month();" class="weui_btn weui_btn_mini weui_btn_default" style="margin: 10px 10px 5px 0px;">本月
+                    </a> <a href="javascript:next_month();" class="weui_btn weui_btn_mini weui_btn_primary" style="float:right;margin: 10px 10px 5px 0px;">下月
+                    </a> </div>
+    <div id="chart1" style="margin-top:40px;"></div>
+    <div style="text-align:center;clear:both;"> </div>
+    <div id="chart2"></div>
+    <br/> <a href="history_detail.html" class="weui_btn weui_btn weui_btn_warn">详细记录</a> <a href="/index.html" class="weui_btn weui_btn_plain_primary">返回首页</a> </body>
+
+</html>
