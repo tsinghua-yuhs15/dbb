@@ -19,7 +19,7 @@ public static Calendar calendar;
 
 public static void main(String[] args) throws IOException, InterruptedException, NumberFormatException, SQLException{
 	ServerSocket serverSocket=new ServerSocket(6000);
-	dbh=new DBHelper("site", "127.0.0.1:3306", "root", "@2ICCHp5#e9A");
+	dbh=new DBHelper("site", "127.0.0.1:3306", "***", "***");
 	dbh.DBConnection();
 	while(true){
 		Socket socket=serverSocket.accept();
